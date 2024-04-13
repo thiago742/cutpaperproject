@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    background: linear-gradient(to right, #2d5047,#000000);
+    color: #fff;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    transition: background-color 0.3s;
+    z-index: 1000;
+
+}
+
+header img {
+    height: 80px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #ccc;
+}
+
+#scrollTopButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#scrollTopButton:hover {
+    background-color: #2c2c2c;
+}
+
+#scrollTopButton:active {
+    transform: scale(0.95);
+}
+
+#whatsappButton {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #2d5047;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 33px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#whatsappButton:hover {
+    background-color: #269138;
+}
+
+#whatsappButton:hover::after {
+    content: "Entrar em Contato";
+    position: absolute;
+    height: 50px;
+    bottom: 15px;
+    right: 16px;
+    transform: translateX(-28%);
+    background-color: #000000cc;
+    color: white;
+    padding-top: 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#whatsappButton::after {
+    content: "Entrar em Contato";
+    position: absolute;
+    height: 50px;
+    bottom: 15px;
+    right: 16px;
+    transform: translateX(-28%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+}
+
+#quem-somos {
+    display: flex;
+    align-items: center;
+    background-image: url(./img/background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/background.jpg);
+    background-size: cover;
+}
+
+.content h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+}
+
+#quem-somos .content p {
+    font-size: 1.5rem;
+    color: #fff;
+}
+#quem-somos img {
+    height: 500px;
+    margin: 0 ;
+    border-radius: 30px;
+    padding: 15px;
+    margin-left: 200px;
+    
+}
+
+.carousel {
+    width: 500px;
+}
+
+.text {
+    text-align: center;
+}
+#cabecalho {
+    max-width: 100%;
+}
+#cabecalho img {
+    margin-top: 88px;
+    width: 100%;
+
+}
+
+.social-links {
+    margin-left: 250px;
+    padding: 40px 0;
+
+}
+
+.socialBtn{
+    width: 50px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 33px;
+    cursor: pointer;
+}
+
+.video-demo {
+    height: 600px;
+}
+
+.carousel .text {
+    margin-top: 9px;
+    margin-bottom: 12px;
+    font-weight: 300;
+}
+
+.carousel .slick-dots li button::before {
+    font-family: slick;
+    font-size: 10px;
+    line-height: 20px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    content: "•";
+    text-align: center;
+    opacity: 0.25;
+    color: rgb(255, 255, 255);
+    -webkit-font-smoothing: antialiased;
+}
+.carousel .slick-dots li button {
+    font-size: 12px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+}
+
+.carousel .slick-dots li.slick-active button:before {
+    opacity: .75;
+    color: #ffffff;
+}
+
+.multiple-items .slick-next::before, .slick-prev::before,
+.carousel .slick-next::before, .slick-prev::before {
+    font-family: slick;
+    font-size: 20px;
+    line-height: 1;
+    opacity: 0.75;
+    color: rgb(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+}
+
+.multiple-items .slick-next button, .slick-prev button,
+.carousel .slick-next button, .slick-prev button{
+    font-size: 0px;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: none;
+    width: 20px;
+    height: 20px;
+    padding: 0px;
+    transform: translate(0px, -50%);
+    color: transparent;
+    border: none;
+    outline: 0px;
+    background: 0px 0px;
+}
+
+.multiple-items .slick-prev::before,
+.carousel .slick-prev::before {
+    content: "";
+}
+
+#produtos {
+    background-image: url(./img/backgroundproduct.jpg);
+    padding-bottom: 40px;
+    max-width: 100%
+}
+
+#clientes h1,
+#produtos h1,
+#contato h1{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 40px 0;
+    color: #fff
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.item p {
+    text-align: center;
+    font-size: 29px;
+    width: 725px;
+    margin-right: 100px;
+    background-color: #2d5047;
+    color: #fff;
+    padding: 30px;
+    border-radius: 1em;
+}
+
+#produtos button {
+    margin-left: 150px;
+    width: 400px;
+    border-radius: 1em;
+    border: none;
+    color: #fff;
+    font-family: 'Poppins' sans-serif;
+    font-size: 1.2em;
+    padding: 15px;
+    background-color: #2d5047;
+    cursor: pointer;
+}
+
+#produtos button:hover {
+    background-color: #269138;
+    transform: scale(1.03);
+}
+
+.item img {
+    border-radius: 1em;
+    height: 400px;
+    margin-left: 150px;
+}
+
+.text-video {
+    margin-left: 90px;
+}
+
+.item video {
+    width: 300px;
+    border-radius: 1em;
+}
+
+.services h1 {
+    text-align: center;
+    margin-right: 110px;
+}
+
+#clientes {
+    background-image: url(./img/background.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/background.jpg);
+    background-size: cover;
+
+}
+
+.brandclients {
+    padding-bottom: 60px;
+    align-items: center;
+    gap: 20px;
+}
+
+#clientes img {
+    height: 200px;
+    justify-content: space-aroundç
+}
+
+.multiple-items {
+    margin-left: 70px;
+    overflow-x: hidden;
+}
+
+#contato {
+    background-color: #2d50388c;
+}
+
+.contact {
+    display: flex;
+}
+
+.mapBox {
+    margin-left: 50px;
+    background-color: #000000;
+    width: 600px;
+    height: 450px;
+}
+
+#contato h4 {
+    font-size: 30px;
+    text-align: center;
+    align-items: center;
+    font-weight: 400;
+}
+
+.rodape {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px 0;
+    background: linear-gradient(to right, #2d5047,#000000);
+    color: #fff;
+}
