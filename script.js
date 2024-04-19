@@ -22,7 +22,21 @@ $(document).ready(function(){
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 13000,
-        dots: true
+        dots: true,
+        arrows: false
+
+    });
+});
+
+$(document).ready(function(){
+    $('.carousel-cabe').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false
+
     });
 });
 
@@ -31,5 +45,27 @@ $('.multiple-items').slick({
     slidesToShow: 4,
     slidesToScroll: 2,
     autoplay: true,
-    autoplaySpeed: 2000
+    autoplaySpeed: 2000,
+    arrows:false
   });
+
+  $('.carouselClient').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows:false
+  });
+
+function clickMenu() {
+    if (menu.style.display == "block") {
+        menu.style.display = "none"
+    } else {
+        menu.style.display = "block"
+    }
+}
+
+function closeMenu () {
+    menu.style.display = "none"
+}
