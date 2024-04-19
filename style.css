@@ -145,6 +145,7 @@ nav ul li a:hover {
     font-size: 1.5rem;
     color: #fff;
 }
+
 #quem-somos img {
     height: 500px;
     margin: 0 ;
@@ -225,38 +226,6 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-.multiple-items .slick-next::before, .slick-prev::before,
-.carousel .slick-next::before, .slick-prev::before {
-    font-family: slick;
-    font-size: 20px;
-    line-height: 1;
-    opacity: 0.75;
-    color: rgb(0, 0, 0);
-    -webkit-font-smoothing: antialiased;
-}
-
-.multiple-items .slick-next button, .slick-prev button,
-.carousel .slick-next button, .slick-prev button{
-    font-size: 0px;
-    line-height: 0;
-    position: absolute;
-    top: 50%;
-    display: none;
-    width: 20px;
-    height: 20px;
-    padding: 0px;
-    transform: translate(0px, -50%);
-    color: transparent;
-    border: none;
-    outline: 0px;
-    background: 0px 0px;
-}
-
-.multiple-items .slick-prev::before,
-.carousel .slick-prev::before {
-    content: "";
-}
-
 #produtos {
     background-image: url(./img/backgroundproduct.jpg);
     padding-bottom: 40px;
@@ -313,13 +282,13 @@ nav ul li a:hover {
     margin-left: 150px;
 }
 
-.text-video {
-    margin-left: 90px;
+.item video {
+    height: 550px;
+    border-radius: 1em;
 }
 
-.item video {
-    width: 300px;
-    border-radius: 1em;
+.services {
+    margin-bottom: 50px;
 }
 
 .services h1 {
@@ -360,7 +329,6 @@ nav ul li a:hover {
 
 .mapBox {
     margin-left: 50px;
-    background-color: #000000;
     width: 600px;
     height: 450px;
 }
@@ -372,10 +340,214 @@ nav ul li a:hover {
     font-weight: 400;
 }
 
+.contact h1 {
+    padding-bottom: 0;
+}
+
+.social-links {
+    padding-top: 0;
+}
+
 .rodape {
     text-align: center;
     margin-top: 40px;
     padding: 10px 0;
     background: linear-gradient(to right, #2d5047,#000000);
     color: #fff;
+}
+
+.text-video {
+    margin-left: 100px;
+}
+
+.mobile-only {
+    display: none;
+}
+
+.social-links ul {
+    text-align: center;
+    width: 50%;
+    margin-top: 50px;
+}
+.social-links ul li {
+    display: inline;
+}
+
+.social-links ul li a {
+    text-decoration: none;
+    font-size: 40px;
+}
+.social-links nav ul li a:hover {
+    color: #ccc;
+}
+
+@media screen and (max-width: 1024px){
+
+    header {
+        height: 117px;
+    }
+
+    .headerit {
+        max-width: 100%;
+    }
+
+    .container {
+        display: block;
+    }
+
+    .container img {
+        height: 55px;
+    }
+
+    i.fa-bars {
+        width: 100%;
+        text-align: center;
+        font-size: 24px;
+        padding: 10px 0;
+    }
+    #menu {
+        display: none;
+    }
+
+    nav ul {
+        background: linear-gradient(to right, #2d5047,#000000);
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        margin: 0;
+  
+    }
+
+    nav ul li a {
+        width: 100%;
+    }
+
+    #whatsappButton,
+    #scrollTopButton {
+        max-width: 375px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .carousel-cabe {
+        padding-top: 100px;
+    }
+
+    #quem-somos .content {
+        height: 500px;
+        margin: 40px;
+    }
+
+    .carousel {
+        height: 400px;
+        width: 300px;
+    }
+
+    #quem-somos .content h1 {
+        font-size: 40px;
+        padding-bottom: 10px;
+    }
+
+    #quem-somos .content p {
+        font-size: 19px;
+    }
+
+    .services,
+    .item {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .text-video video {
+        margin-top: 40px;;
+    }
+
+    .services h1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .services p {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 19px;
+    }
+
+    .item p {
+        text-align: center;
+        font-size: 19px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .item img{
+        height: 300px;
+        margin-top: 40px;
+    }
+
+    #produtos button {
+        width: 300px;
+        margin-bottom: 40px;
+    }
+
+    .carouselClient {
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .carouselClient img {
+        margin: 0 auto;
+    }
+
+    #clientes h1 {
+        padding: 20px;
+    }
+
+    .contact {
+        display: block;
+    }
+
+    .mapBox,
+    .vazer {
+        height: 270px;
+        width: 270px;
+    }
+    
+    #contato h1 {
+        padding: 20px 20px;
+    }
+
+    #contato h4 {
+        font-size: 14px;
+    }
+
+    .mapBox,
+    .vazer,
+    .item img,
+    .text-video video,
+    #produtos button,
+    #produtos button:hover,
+    .container img{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .iconcenter {
+        text-align: center;
+        font-size: 30px;
+        padding: 20px 0;
+    }
+
 }
