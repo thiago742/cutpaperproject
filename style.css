@@ -385,6 +385,8 @@ nav ul li a:hover {
 
     header {
         height: 117px;
+        padding: 0;
+        margin: 10px 0;
     }
 
     .headerit {
