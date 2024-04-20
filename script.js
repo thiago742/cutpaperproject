@@ -2,7 +2,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        const offsetTop = targetElement.getBoundingClientRect().top + window.scrollY;
+
+        window.scroll({
+            top: offsetTop - 100,
             behavior: 'smooth'
         });
     });
